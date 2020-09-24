@@ -1,0 +1,43 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <a id="side-nav-button" mat-button (click)="showNav()">
+      <mat-icon>menu</mat-icon>
+    </a>
+    <a id="logo-button" mat-button routerLink="/">
+      <img src="assets/DesignIntentLogo.png">
+    </a>
+        <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+          <ul fxLayout="row" fxLayoutGap="20px">
+            <!-- <ng-container *ngIf="(currentUser$ | async) != null"></ng-container> -->
+            <ng-container>
+              <li>
+                <a mat-button routerLink="/dashboard/file">
+                  Demo
+                </a>
+              </li>
+            </ng-container>
+            <li>
+              <button mat-button [matMenuTriggerFor]="menu">
+
+                <mat-icon *ngIf="(currentUser$ | async) === null">person_outline</mat-icon>
+                <ng-container *ngIf="(currentUser$ | async) !== null">
+                  Welcome {{(currentUser$ | async)?.displayName}}
+                </ng-container>
+              </button>
+              <mat-menu #menu="matMenu">
+                <a mat-menu-item routerLink="/account/login" *ngIf="(currentUser$ | async) === null" >
+                  <mat-icon>login</mat-icon>
+                  Login
+                </a>
+                <button mat-menu-item (click)="signOut()" *ngIf="(currentUser$ | async) !== null" >
+                  Sign out
+                </button>
+
+              </mat-menu>
+            </li>
+          </ul>
+        </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-divider></mat-divider>

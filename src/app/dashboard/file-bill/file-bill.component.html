@@ -1,0 +1,15 @@
+<mat-card>
+  <mat-card-header>
+    <h1>Bill of Material</h1>
+  </mat-card-header>
+  <mat-card-content>
+    <ejs-grid [dataSource]="data" [allowSorting]="true" [filterSettings]="filterOptions" [allowFiltering]="true">
+      <e-columns>
+        <e-column [filter]="filter" headerText="Description" field="description"></e-column>
+        <e-column field="partNumber" headerText="Part Number"></e-column>
+        <e-column field="qty" headerText="Qty"></e-column>
+      </e-columns>
+    </ejs-grid>
+  </mat-card-content>
+
+</mat-card>

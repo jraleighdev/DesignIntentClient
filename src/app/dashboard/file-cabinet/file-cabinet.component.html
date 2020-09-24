@@ -1,0 +1,40 @@
+
+<mat-drawer-container>
+  <mat-drawer #drawer [mode]="mobileQuery.matches ? 'over' : 'side'" [opened]="mobileQuery.matches ? dashBoardService.navVisible : true">
+    <app-file-selection></app-file-selection>
+  </mat-drawer>
+  <mat-drawer-content>
+    <div class="bootstrap-wrapper main">
+
+      <div class="container-fluid">
+        <div class="row">
+
+          <div class="col fill">
+
+            <div id="forgeViewer" #forgeViewer></div>
+
+          </div>
+        </div>
+
+        <div class="row details-container">
+          <div class="col">
+            <mat-card>
+              <mat-card-content>
+                <app-file-bill></app-file-bill>
+              </mat-card-content>
+
+            </mat-card>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>
+
+
+
+
+
+
+
+

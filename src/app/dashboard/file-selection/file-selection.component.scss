@@ -1,0 +1,25 @@
+.file-selection-header {
+  vertical-align: middle;
+  padding-left: 12px;
+  border: solid grey 1px;
+}
+
+.file-selection-container {
+  margin-top: 5px;
+}
+
+@media only screen and (max-width: 800px) {
+  #logo-button {
+    display: block;
+    img {
+      vertical-align: middle;
+    }
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  #logo-button {
+    display: none;
+  }
+}
+

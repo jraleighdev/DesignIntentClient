@@ -1,0 +1,13 @@
+<a id="logo-button" mat-button (click)="goHome()">
+  <img src="assets/DesignIntentLogo.png">
+</a>
+<div>
+  <ejs-grid [dataSource]="data" [allowSorting]="true" [filterSettings]="filterOptions" [allowFiltering]="true" (rowSelected)=rowSelected($event)>
+    <e-columns>
+      <e-column [filter]="filter" field="fileName" headerText="File Name"></e-column>
+    </e-columns>
+  </ejs-grid>
+</div>
+
+
+

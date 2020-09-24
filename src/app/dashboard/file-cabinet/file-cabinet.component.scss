@@ -1,0 +1,27 @@
+.fill{
+  height: calc(100vh - 140px);
+}
+
+
+.main {
+  padding-top: 10px; /* space for the top nav bar */
+  margin-right: 30px;
+}
+
+.details-container {
+  margin-top: 15px;
+}
+
+mat-drawer {
+  width: 300px;
+}
+
+mat-drawer-container {
+  height: calc(100vh - 65px);
+}
+
+mat-drawer-content {
+  padding: 20px;
+}
+
+
